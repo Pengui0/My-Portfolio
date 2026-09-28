@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Sidharth Arvind, a student interested in AI and machine learning.">
+    <title>Sidharth Arvind | Portfolio</title>
+
+    <style>
+        /* global reset + border-box so widths are easy to predict */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #10161d;
+            color: #e6e4dd;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+        }
+
+        a {
+            color: #e6e4dd;
+            text-decoration: none;
+        }
+
+        /* navbar set to sticky */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #10161d;
+            border-bottom: 1px solid #26323f;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul a {
+            color: #98a3ae;
+            font-size: 0.95rem;
+        }
+
+        /* sections */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+        }
+
+        .section-title p {
+            color: #98a3ae;
+        }
+
+        /* hero */
+        #home {
+            min-height: 85vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            width: 60%;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: #98a3ae;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border: 1px solid #26323f;
+            font-size: 0.95rem;
+        }
+
+        .primary {
+            background-color: #7fb2e5;
+            border-color: #7fb2e5;
+            color: #10161d;
+        }
+
+        .hero-card {
+            width: 300px;
+            padding: 30px 20px;
+            text-align: center;
+            background-color: #17202a;
+            border: 1px solid #26323f;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-card img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .hero-card p {
+            color: #98a3ae;
+            font-size: 0.9rem;
+        }
+
+        /* about - two columns with grid */
+        #about {
+            border-top: 1px solid #26323f;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .about-content p {
+            color: #98a3ae;
+        }
+
+        .info {
+            padding: 12px 0 12px 15px;
+            border-left: 3px solid #7fb2e5;
+            margin-bottom: 15px;
+        }
+
+        .info h4 {
+            font-size: 1rem;
+        }
+
+        .info p {
+            font-size: 0.9rem;
+        }
+
+        /* skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 8px 16px;
+            border: 1px solid #26323f;
+            color: #98a3ae;
+            font-size: 0.9rem;
+        }
+
+        /* projects - 3 equal columns with fr */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project {
+            padding: 25px;
+            background-color: #17202a;
+            border: 1px solid #26323f;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .project h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #98a3ae;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tech {
+            color: #7fb2e5;
+            font-size: 0.8rem;
+        }
+
+        /* contact */
+        #contact {
+            border-top: 1px solid #26323f;
+        }
+
+        #contact h2 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        #contact p {
+            color: #98a3ae;
+            margin-bottom: 25px;
+        }
+
+        /* footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 8%;
+            border-top: 1px solid #26323f;
+            color: #98a3ae;
+            font-size: 0.85rem;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .footer-right a {
+            color: #98a3ae;
+        }
+
+        /* mobile */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            #home {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-card {
+                width: 100%;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-right {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Sidharth Arvind</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <div class="hero-text">
+                <h1>Hi, I'm Sidharth.</h1>
+                <p>
+                    I'm a student who likes AI and machine learning, and I learn
+                    best by building things. Most of the projects below started
+                    with me wondering if I could make something work.
+                </p>
+                <div class="buttons">
+                    <a href="#projects" class="btn primary">See my projects</a>
+                    <a href="#contact" class="btn">Get in touch</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <img src="../is_meee.png" alt="Sidharth Arvind">
+                <h3>Sidharth Arvind</h3>
+                <p>AI, ML and software</p>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div class="section-title">
+                <h2>About me</h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    I'm still a student, and AI and machine learning are what I
+                    spend most of my free time on. I'm especially interested in
+                    artificial neural networks and want to go deeper into the
+                    research side of them.
+                    <br><br>
+                    I like to understand why something works before I build on
+                    it. Then I try it in a real project, break it, and fix it.
+                </p>
+
+                <div>
+                    <div class="info">
+                        <h4>Interested in</h4>
+                        <p>AI and machine learning</p>
+                    </div>
+                    <div class="info">
+                        <h4>Right now</h4>
+                        <p>Going deeper into AI and ML</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="skills">
+            <div class="section-title">
+                <h2>Skills</h2>
+                <p>What I use the most.</p>
+            </div>
+
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Artificial Intelligence</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">ANN and Deep Learning</span>
+                <span class="skill">Data Analysis</span>
+                <span class="skill">NumPy and Pandas</span>
+            </div>
+        </section>
+
+
+        <section id="projects">
+            <div class="section-title">
+                <h2>Projects</h2>
+                <p>Things I've built or am building.</p>
+            </div>
+
+            <div class="projects">
+                <article class="project">
+                    <h3>Orbit Sentinel</h3>
+                    <p>
+                        A real-time satellite tracking platform. It uses live
+                        orbital data to detect conjunctions automatically and
+                        flag satellites that might collide, then plans the
+                        avoidance response.
+                    </p>
+                    <div class="tech">Python, Machine Learning, Docker, AWS OpenSearch</div>
+                </article>
+
+                <article class="project">
+                    <h3>UdhaarAI</h3>
+                    <p>
+                        A fintech idea for small merchants. It helps them see
+                        where their cashflow is going and points them to better
+                        financial options.
+                    </p>
+                    <div class="tech">AI, FinTech, Data Analysis</div>
+                </article>
+
+                <article class="project">
+                    <h3>IntelliFlow</h3>
+                    <p>
+                        A reinforcement learning project for traffic signals.
+                        Multiple agents learn to control an intersection so more
+                        vehicles get through, tested in simulated city traffic.
+                    </p>
+                    <div class="tech">Python, OpenEnv, HuggingFace Spaces</div>
+                </article>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <h2>Let's talk</h2>
+            <p>
+                Have an idea, a project, or a question about anything here?
+                Send me an email.
+            </p>
+            <a href="mailto:saisidharth.1808@gmail.com" class="btn primary">saisidharth.1808@gmail.com</a>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div>
+            <strong>Sidharth Arvind</strong><br>
+            Contact number - 9972548120<br>
+            2026
+        </div>
+
+        <div class="footer-right">
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#projects">Projects</a><br>
+            <a href="https://github.com/Pengui0" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
