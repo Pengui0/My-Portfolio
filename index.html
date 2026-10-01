@@ -17,166 +17,143 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #10161d;
-            color: #e6e4dd;
+            background-color: black;
+            color: white;
             line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: Georgia, serif;
-            font-weight: normal;
-        }
+        }h1, h2, h3 {
+            font-family: Arial, sans-serif;}
 
         a {
-            color: #e6e4dd;
+            color: white;
             text-decoration: none;
         }
 
 
-        /* ---------- top bar (sticky so it follows you down the page) ---------- */
+        /* ---------- top bar (sticky so it follows down the page) ---------- */
         header {
             position: sticky;
             top: 0;
-            z-index: 10;
-            background-color: #10161d;
-            border-bottom: 1px solid #26323f;
-        }
-
-        nav {
+            z-index: 100;
+            background-color: black;
+            border-bottom: 1px solid gray;
+        }nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 8%;
+            padding: 20px 10%;
         }
 
         .brand {
-            font-family: Georgia, serif;
-            font-size: 1.3rem;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
         }
 
         nav ul {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             list-style: none;
-        }
-
-        nav ul a {
-            color: #98a3ae;
-            font-size: .95rem;
+        }nav ul a {
+            color: lightgray;
+            font-size: 16px;
         }
 
 
         /* ---------- shared section stuff ---------- */
         section {
-            padding: 80px 8%;
-        }
-
-        .sec-head {
-            margin-bottom: 35px;
+            padding: 80px 10%;
+        }.sec-head {
+        margin-bottom: 30px;
         }
 
         .sec-head h2 {
-            font-size: 2.2rem;
-        }
-
-        .sec-head p {
-            color: #98a3ae;
+            font-size: 32px;
+        }.sec-head p {
+            color: lightgray;
         }
 
 
         /* ---------- hero ---------- */
         #home {
-            min-height: 85vh;
+            min-height: 90vh;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 50px;
-        }
-
-        .intro {
+        }.intro {
             width: 60%;
         }
 
         .intro h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            color: #98a3ae;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
+            font-size: 50px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }.intro p {
+            color: lightgray;
+            font-size: 18px;
+            margin-bottom: 25px;
         }
 
         .cta-row {
             display: flex;
-            gap: 15px;
+            gap: 10px;
         }
 
-        .cta {
-            display: inline-block;
-            padding: 12px 22px;
-            border: 1px solid #26323f;
-            font-size: .95rem;
+        .cta {display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid gray;
+            font-size: 16px;
         }
 
         .cta-main {
-            background-color: #7fb2e5;
-            border-color: #7fb2e5;
-            color: #10161d;
+            background-color: skyblue;
+            border-color: skyblue;
+            color: black;
         }
-
-        .me-card {
-            width: 300px;
-            padding: 30px 20px;
+.me-card {
+            width: 250px;
+            padding: 20px;
             text-align: center;
-            background-color: #17202a;
-            border: 1px solid #26323f;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .me-card img {
-            width: 180px;
-            height: 180px;
+            background-color: midnightblue;
+            border: 1px solid gray;
+            box-shadow: 0 2px 5px black;
+        }.me-card img {
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .me-card p {
-            color: #98a3ae;
-            font-size: .9rem;
+            color: lightgray;
+            font-size: 14px;
         }
 
 
-        /* ---------- about (2 cols) ---------- */
+        /* ---------- about (2 colums) ---------- */
         #about {
-            border-top: 1px solid #26323f;
+            border-top: 1px solid gray;
         }
-
-        .about-grid {
+.about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 50px;
         }
 
-        .about-grid p {
-            color: #98a3ae;
+    .about-grid p {
+            color: lightgray;
         }
 
-        .fact {
-            padding: 12px 0 12px 15px;
-            border-left: 3px solid #7fb2e5;
-            margin-bottom: 15px;
+.fact {
+            padding: 10px 0 10px 10px;
+            border-left: 4px solid skyblue;
+            margin-bottom: 10px;
         }
 
         .fact h4 {
-            font-size: 1rem;
-        }
-
-        .fact p {
-            font-size: .9rem;
+            font-size: 16px;
+        }.fact p {
+            font-size: 14px;
         }
 
 
@@ -187,121 +164,114 @@
             gap: 10px;
         }
 
-        .skill-tag {
-            padding: 8px 16px;
-            border: 1px solid #26323f;
-            color: #98a3ae;
-            font-size: .9rem;
+.skill-tag {
+            padding: 8px 15px;
+            border: 1px solid gray;
+            color: lightgray;
+            font-size: 14px;
         }
 
 
-        /* ---------- projects (3 equal cols) ---------- */
-        .work-grid {
+        /* ---------- projects (3 equal coluns) ---------- */
+.work-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
+            gap: 25px;
         }
 
-        .work-card {
-            padding: 25px;
-            background-color: #17202a;
-            border: 1px solid #26323f;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.work-card {
+            padding: 20px;
+            background-color: midnightblue;
+            border: 1px solid gray;
+            box-shadow: 0 2px 5px black;
         }
 
-        .work-card h3 {
-            font-size: 1.4rem;
+.work-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+.work-card p {
+            color: lightgray;
+            font-size: 16px;
             margin-bottom: 10px;
         }
 
-        .work-card p {
-            color: #98a3ae;
-            font-size: .95rem;
-            margin-bottom: 15px;
-        }
-
-        .stack {
-            color: #7fb2e5;
-            font-size: .8rem;
+.stack {
+            color: skyblue;
+            font-size: 14px;
         }
 
 
         /* ---------- contact ---------- */
         #contact {
-            border-top: 1px solid #26323f;
+            border-top: 1px solid gray;
         }
-
-        #contact h2 {
-            font-size: 2.4rem;
-            margin-bottom: 10px;
-        }
-
-        #contact p {
-            color: #98a3ae;
-            margin-bottom: 25px;
+#contact h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }#contact p {
+            color: lightgray;
+            margin-bottom: 20px;
         }
 
 
         /* ---------- footer ---------- */
-        footer {
+footer {
             display: flex;
             justify-content: space-between;
-            padding: 25px 8%;
-            border-top: 1px solid #26323f;
-            color: #98a3ae;
-            font-size: .85rem;
+            padding: 20px 10%;
+            border-top: 1px solid gray;
+            color: lightgray;
+            font-size: 14px;
         }
-
-        .foot-nav {
+.foot-nav {
             text-align: right;
         }
 
         .foot-nav a {
-            color: #98a3ae;
+            color: lightgray;
         }
 
 
         /* phones / small screens */
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             nav ul {
                 display: none;
             }
-
-            section {
-                padding: 60px 6%;
+section {
+                padding: 50px 5%;
             }
 
-            #home {
+#home {
                 flex-direction: column;
                 align-items: flex-start;
             }
+.intro {
+                width: 100%;
+            }
+.intro h1 {
+                font-size: 36px;
+            }
 
-            .intro {
+.me-card {
                 width: 100%;
             }
 
-            .intro h1 {
-                font-size: 2.8rem;
-            }
-
-            .me-card {
-                width: 100%;
-            }
-
-            .about-grid {
+.about-grid {
                 grid-template-columns: 1fr;
             }
 
-            .work-grid {
+.work-grid {
                 grid-template-columns: 1fr;
             }
 
-            footer {
+footer {
                 flex-direction: column;
                 gap: 10px;
             }
 
-            .foot-nav {
+.foot-nav {
                 text-align: left;
             }
         }
@@ -314,36 +284,35 @@
         <nav>
             <div class="brand">Sidharth Arvind</div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
         <!-- hero -->
         <section id="home">
             <div class="intro">
-                <h1>Hi, I'm Sidharth.</h1>
-                <p>
-                    I'm a student who likes AI and machine learning, and I learn
-                    best by building things. Most of the projects below started
-                    with me wondering if I could make something work.
-                </p>
-                <div class="cta-row">
-                    <a href="#projects" class="cta cta-main">See my projects</a>
-                    <a href="#contact" class="cta">Get in touch</a>
-                </div>
+            <h1>Hi, I'm Sidharth.</h1>
+            <p>
+            I'm a student who likes AI and machine learning, and I learn
+            best by building things. Most of the projects below started
+            with me wondering if I could make something work.
+            </p>
+            <div class="cta-row">
+                <a href="#projects" class="cta cta-main">See my projects</a>
+                <a href="#contact" class="cta">Get in touch</a>
+            </div>
             </div>
 
             <div class="me-card">
-                <img src="neural_networks.jpg" alt="Sidharth Arvind">
-                <h3>Sidharth Arvind</h3>
-                <p>AI, ML and software</p>
+            <img src="neural_networks.jpg" alt="Sidharth Arvind">
+            <h3>Sidharth Arvind</h3>
+            <p>AI, ML and software</p>
             </div>
         </section>
 
@@ -351,29 +320,29 @@
         <!-- about -->
         <section id="about">
             <div class="sec-head">
-                <h2>About me</h2>
+        <h2>About me</h2>
             </div>
 
             <div class="about-grid">
                 <p>
-                    I'm still a student, and AI and machine learning are what I
-                    spend most of my free time on. I'm especially interested in
-                    artificial neural networks and want to go deeper into the
-                    research side of them.
-                    <br><br>
-                    I like to understand why something works before I build on
-                    it. Then I try it in a real project, break it, and fix it.
+                I'm still a student, and AI and machine learning are what I
+                spend most of my free time on. I'm especially interested in
+                artificial neural networks and want to go deeper into the
+                research side of them.
+                <br><br>
+                I like to understand why something works before I build on
+                it. Then I try it in a real project, break it, and fix it.
                 </p>
 
                 <div>
-                    <div class="fact">
-                        <h4>Interested in</h4>
-                        <p>AI and machine learning</p>
-                    </div>
-                    <div class="fact">
-                        <h4>Right now</h4>
-                        <p>Going deeper into AI and ML</p>
-                    </div>
+                <div class="fact">
+                <h4>Interested in</h4>
+                <p>AI and machine learning</p>
+                </div>
+                <div class="fact">
+                <h4>Right now</h4>
+                <p>Going deeper nto AI and ML</p>
+                </div>
                 </div>
             </div>
         </section>
@@ -382,20 +351,20 @@
         <!-- skills -->
         <section id="skills">
             <div class="sec-head">
-                <h2>Skills</h2>
-                <p>What I use the most.</p>
+            <h2>Skills</h2
+            <p>What I use the most.</p>
             </div>
 
             <div class="skill-list">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Artificial Intelligence</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">ANN and Deep Learning</span>
-                <span class="skill-tag">Data Analysis</span>
-                <span class="skill-tag">NumPy and Pandas</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Artificial Intelligence</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">ANN and Deep Learning</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">NumPy and Pandas</span>
             </div>
         </section>
 
@@ -403,18 +372,18 @@
         <!-- projects -->
         <section id="projects">
             <div class="sec-head">
-                <h2>Projects</h2>
-                <p>Things I've built or am building.</p>
+        <h2>Projects</h2>
+        <p>Things I've built or am building.</p>
             </div>
 
             <div class="work-grid">
                 <article class="work-card">
                     <h3>Orbit Sentinel</h3>
                     <p>
-                        A real-time satellite tracking platform. It uses live
-                        orbital data to detect conjunctions automatically and
-                        flag satellites that might collide, then plans the
-                        avoidance response.
+                    A real-time satellite tracking platform. It uses live
+                    orbital data to detect conjunctions automatically and
+                    flag satellites tha might collide, then plans the
+                    avoidance response.
                     </p>
                     <div class="stack">Python, Machine Learning, Docker, AWS OpenSearch</div>
                 </article>
@@ -422,9 +391,9 @@
                 <article class="work-card">
                     <h3>UdhaarAI</h3>
                     <p>
-                        A fintech idea for small merchants. It helps them see
-                        where their cashflow is going and points them to better
-                        financial options.
+                    A fintech idea for small merchants. It helps them see
+                    where their cashflow is going and points them to better
+                    financial options.
                     </p>
                     <div class="stack">AI, FinTech, Data Analysis</div>
                 </article>
@@ -432,9 +401,9 @@
                 <article class="work-card">
                     <h3>IntelliFlow</h3>
                     <p>
-                        A reinforcement learning project for traffic signals.
-                        Multiple agents learn to control an intersection so more
-                        vehicles get through, tested in simulated city traffic.
+                    A reinforcement learning project for traffic signals.
+                    Multiple agents learn to control an intersection so more
+                    vehicles get throh, tested in simulated city traffic.
                     </p>
                     <div class="stack">Python, OpenEnv, HuggingFace Spaces</div>
                 </article>
@@ -446,8 +415,8 @@
         <section id="contact">
             <h2>Let's talk</h2>
             <p>
-                Have an idea, a project, or a question about anything here?
-                Send me an email.
+        Have an idea, a project, or a question about anything here?
+        Send me an email.
             </p>
             <a href="mailto:dontmailme@gmail.com" class="cta cta-main">dontmailme@gmail.com</a>
         </section>
@@ -457,9 +426,9 @@
 
     <footer>
         <div>
-            <strong>Sidharth Arvind</strong><br>
-            Contact number - 1234567891<br>
-            2026
+        <strong>Sidharth Arvind</strong><br>
+        Contact number - 1234567891<br>
+        2026
         </div>
 
         <div class="foot-nav">
